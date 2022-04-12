@@ -3,7 +3,7 @@ entries:
   gp-lite:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-04-12T13:08:40.840126667+05:30"
+    created: "2022-04-12T15:15:59.589157624+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -12,10 +12,10 @@ entries:
       name: gp-rabbitmq
       repository: ""
     description: A Helm chart for Kubernetes
-    digest: 511a2c27e8fd85a573e927deec6d4e0099ee9bed074b51226aa1f65147a48903
+    digest: b7fe5621ec83a46de810f92ee370788ef2b958212c1939da2be4ec327a36d557
     name: gp-lite
     type: application
     urls:
     - gp-lite-4.2.2.tgz
     version: 4.2.2
-generated: "2022-04-12T13:08:40.819281602+05:30"
+generated: "2022-04-12T15:15:59.578870174+05:30"
