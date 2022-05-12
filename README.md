@@ -59,6 +59,39 @@ microk8s-hostpath (default)   microk8s.io/hostpath   Delete          Immediate  
 $ sudo helm install gp-core-4-2 gp-lite/gp-lite  --namespace gp-lite  --set global.routingType=NodePortWithOutIngress --set global.installType=public --set global.storageClassName=microk8s-hostpath --set global.cluster.provider=other --set-string global.gopaddle.https=false --set-string global.gopaddleWebhook.https=false --set global.staticIP=$STATICIP  --set global.gp-rabbitmq.enabled=false --set global.gp-lite-core.enabled=true --set gateway.gpkubeux.installSource=microk8s --version 4.2.3
 ```
 
+## Wait for ready state
+
+Before you can use all the gopaddle services, they need to be in Ready state.
+To check and wait until all the services move to Ready state, use the below
+command:
+
+$ sudo kubectl wait --for=condition=ready pod -l released-by=gopaddle -n gp-lite
+
+The following is a sample output when the gopaddle services are in ready state:
+```
+pod/rabbitmq-0 condition met
+pod/influxdb-0 condition met
+pod/esearch-0 condition met
+pod/redis-8564f6b9fd-zqb2q condition met
+pod/mongodb-0 condition met
+pod/appworker-7b687d86f6-hxp8s condition met
+pod/gpcore-6bc47c5c94-kq9jk condition met
+pod/costmanager-564c95fcdf-x7f2t condition met
+pod/clustermanager-d95cccbc-dhkl9 condition met
+pod/deploymentmanager-7967f54468-qw24m condition met
+pod/nodechecker-7ddfb5b556-pb9xm condition met
+pod/domainmanager-7c6c6f57f7-xfn2j condition met
+pod/marketplace-97bfcb68f-lnmnq condition met
+pod/configmanager-5c6878bc99-8pzw7 condition met
+pod/activitymanager-b7d669fb8-pcnhn condition met
+pod/appscanner-677cd5799-ztrxj condition met
+pod/usermanager-796bf9c8c9-f8tgg condition met
+pod/cloudmanager-6c8dd7c6c5-d8xpg condition met
+pod/alertmanager-77d4478976-24pgc condition met
+pod/webhook-785c846b44-wxwwd condition met
+pod/gateway-b768864ff-s54b2 condition met
+```
+
 ## microk8s addon for gopaddle community (lite) edition
 
 The microk8s addon for gopaddle community (lite) edition uses this helm
