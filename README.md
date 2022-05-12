@@ -1,7 +1,7 @@
 # Helm repository for gopaddle community (lite) edition
 
-This outlines the steps to add this helm repository to do a helm install of
-gopaddle community (lite) edition.
+This outlines the steps to add this helm repository to do a helm-based
+installation of gopaddle community (lite) edition.
 
 The gopaddle community (lite) edition is also referred with the names
 gp-lite and/or gopaddle-lite.
@@ -32,7 +32,7 @@ Example:
 ## microk8s addon for gopaddle community (lite) edition:
 
 The microk8s addon for gopaddle community (lite) edition uses this helm
-repository for helm installation.
+repository for helm-based installation of gopaddle-lite.
 
 The general documentation for microk8s addons is at:
 https://github.com/canonical/microk8s-community-addons
