@@ -31,14 +31,17 @@ Example:
 
 ## microk8s addon for gopaddle community (lite) edition:
 
-This general documentation for microk8s addons is at:
+The microk8s addon for gopaddle community (lite) edition uses this helm
+repository for helm installation.
+
+The general documentation for microk8s addons is at:
 https://github.com/canonical/microk8s-community-addons
   
 The same is also available from:
 https://github.com/gopaddle-io/microk8s-community-addons
   
-For documentation specific to mircok8s addon for
-gopaddle community (lite) edition, see:
+For documentation specific to microk8s addon for gopaddle community (lite)
+edition, see:
 https://github.com/gopaddle-io/microk8s-community-addons/blob/main/README.gopaddle_addon.md
 
 ## Help:
