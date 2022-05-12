@@ -6,7 +6,7 @@ installation of gopaddle community (lite) edition.
 The gopaddle community (lite) edition is also referred with the names
 gp-lite and/or gopaddle-lite.
 
-## step to add gp-lite helm repository
+## Steps to add gp-lite helm repository
 ```
 $ sudo helm repo add gp-lite https://gopaddle-io.github.io/gopaddle-lite
 ```
@@ -22,8 +22,10 @@ You'll see output like the following:
 Update Complete. ⎈Happy Helming!⎈
 ```
 
-Once the above is done, you can do a helm install of the software supplied
-by this repository in the following steps:
+## Install gp-lite from its helm repository
+
+Once you have added gp-lite helm repository, you can do a helm install of the
+software supplied by this repository in the following steps:
 
 #### Note: The below steps assume gp-lite version 4.2.3. If you are installing a different version number, substitute this with the corresponding version number.
 
