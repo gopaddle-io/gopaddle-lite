@@ -1,7 +1,7 @@
 # Helm repository for gopaddle community (lite) edition
 
-This outlines the steps to add this helm repository so that you can do
-a helm install of gopaddle community (lite) edition.
+This outlines the steps to add this helm repository to do a helm install of
+gopaddle community (lite) edition.
 
 The gopaddle community (lite) edition is also referred using the names
 gp-lite and/or gopaddle-lite.
