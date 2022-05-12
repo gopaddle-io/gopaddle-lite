@@ -8,12 +8,12 @@ gp-lite and/or gopaddle-lite.
 
 ## step to add gp-lite helm repository
 ```
-sudo helm repo add gp-lite https://gopaddle-io.github.io/gopaddle-lite
+$ sudo helm repo add gp-lite https://gopaddle-io.github.io/gopaddle-lite
 ```
 
 To confirm that the above has succeeded, issue the following command:
 ```
-sudo helm repo update
+$ sudo helm repo update
 ```
 
 You'll see output like the following:
@@ -23,9 +23,40 @@ Update Complete. ⎈Happy Helming!⎈
 ```
 
 Once the above is done, you can do a helm install of the software supplied
-by this repository.
+by this repository in the following steps:
 
-Example:
+### The below steps assume gp-lite version 4.2.3. If you are installing a
+different version number, substitute this with the corresponding version number.
+
+1. Create a namespace for gp-lite:
+
+```
+$ sudo kubectl create ns gp-lite
+```
+
+2. Install rabbitmq:
+
+```
+$ sudo helm install gp-rabbitmq-4-2 gp-lite/gp-lite --namespace gp-lite --set global.routingType=NodePortWithOutIngress --set global.installType=public --set global.storageClassName=microk8s-hostpath --set global.gp-rabbitmq.enabled=true --set global.gp-lite-core.enabled=false --version 4.2.3
+```
+
+### Note:
+gopaddle installer requires storage configuration (StorageClass) in the Kubernetes environment in order to provision gopaddle services.
+
+The storageClassName can either be specified as above for "microk8s-hostpath", or, if you want to use a different StorageClass, obtain that by the command:
+```
+$ sudo kubectl get sc
+```
+
+A sample output is shown below:
+```
+$ sudo kubectl get sc
+NAME                          PROVISIONER            RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+microk8s-hostpath (default)   microk8s.io/hostpath   Delete          Immediate           false                  76m
+```
+
+3. Install gp-lite:
+
 ```
 ```
 
