@@ -35,8 +35,7 @@ The microk8s addon for gopaddle community (lite) edition uses this helm
 repository for helm-based installation of gopaddle-lite.
 
 The general documentation for microk8s addons is at:
-https://github.com/canonical/microk8s-community-addons
-
+https://github.com/canonical/microk8s-community-addons  
 The same is also available from:
 https://github.com/gopaddle-io/microk8s-community-addons
   
