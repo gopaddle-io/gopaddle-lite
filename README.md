@@ -56,6 +56,7 @@ microk8s-hostpath (default)   microk8s.io/hostpath   Delete          Immediate  
 3. Install gp-lite:
 
 ```
+$ sudo helm install gp-core-4-2 gp-lite/gp-lite  --namespace gp-lite  --set global.routingType=NodePortWithOutIngress --set global.installType=public --set global.storageClassName=microk8s-hostpath --set global.cluster.provider=other --set-string global.gopaddle.https=false --set-string global.gopaddleWebhook.https=false --set global.staticIP=$STATICIP  --set global.gp-rabbitmq.enabled=false --set global.gp-lite-core.enabled=true --set gateway.gpkubeux.installSource=microk8s --version 4.2.3
 ```
 
 ## microk8s addon for gopaddle community (lite) edition
