@@ -45,8 +45,5 @@ https://github.com/gopaddle-io/microk8s-community-addons/blob/main/README.gopadd
 
 ## Help:
 
-```
-gopaddle lite is a community edition of gopaddle.
-For help related to this, visit the gopaddle Help Center at:
+For help related to gopaddle community (lite) edition, visit the gopaddle Help Center at:
      https://help.gopaddle.io
-```
