@@ -101,7 +101,7 @@ repository for helm-based installation of gopaddle-lite.
 
 For documentation specific to microk8s addon for gopaddle community (lite)
 edition, see:
-https://github.com/gopaddle-io/microk8s-community-addons/blob/main/README.gopaddle_addon.md
+https://github.com/gopaddle-io/microk8s-community-addons-gplite/blob/main/README.md
 
 ## Help
 
