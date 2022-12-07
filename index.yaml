@@ -3,7 +3,7 @@ entries:
   gp-installer:
   - apiVersion: v2
     appVersion: 4.2.5
-    created: "2022-12-07T09:35:27.795060155+05:30"
+    created: "2022-12-07T10:16:22.424128551+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -12,7 +12,7 @@ entries:
       name: gp-rabbitmq
       repository: ""
     description: Simple low-code platform for Kubernetes developers and operators
-    digest: cdcbe508f85805ce73dfe13ac62610af8576e3d68f9c0f5da73508d89f79678c
+    digest: 646cd402e1bcef6c777b21d538648af3f6f904950ef2b184283d86eb80885a96
     home: https://gopaddle.io
     icon: https://gopaddle-marketing.s3.ap-southeast-2.amazonaws.com/gopaddle.png
     keywords:
@@ -23,12 +23,12 @@ entries:
     kubeVersion: '>=1.21-0'
     name: gp-installer
     urls:
-    - gp-installer-4.2.5-1.tgz
-    version: 4.2.5-1
+    - gp-installer-4.2.5.tgz
+    version: 4.2.5
   gp-lite:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-12-07T09:35:27.888622483+05:30"
+    created: "2022-12-07T10:16:22.4490373+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -45,7 +45,7 @@ entries:
     version: 4.2.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-12-07T09:35:27.834174641+05:30"
+    created: "2022-12-07T10:16:22.44018407+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -62,7 +62,7 @@ entries:
     version: 4.2.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-12-07T09:35:27.808154046+05:30"
+    created: "2022-12-07T10:16:22.43183604+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -77,4 +77,4 @@ entries:
     urls:
     - gp-lite-4.2.2.tgz
     version: 4.2.2
-generated: "2022-12-07T09:35:27.785919436+05:30"
+generated: "2022-12-07T10:16:22.414230588+05:30"
