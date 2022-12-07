@@ -4,3 +4,4 @@ owners:
     email: vinothiniraju@gopaddle.io
 ignore:
   - name: gp-lite
+  - name: gp-installer
