@@ -1,4 +1,7 @@
-repositoryID: gp-lite
+repositoryID: ecb2e732-428d-40db-b77b-d65ac765816f
 owners: 
   - name: Vinothini Raju
     email: vinothiniraju@gopaddle.io
+ignore:
+  - name: gp-lite
+  - name: gp-installer
