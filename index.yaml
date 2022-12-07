@@ -21,7 +21,7 @@ entries:
     - PaaS
     - Community Edition
     kubeVersion: '>=1.21-0'
-    name: gp-installer
+    name: gopaddle
     urls:
     - gp-installer-4.2.5.tgz
     version: 4.2.5
