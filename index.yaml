@@ -3,7 +3,7 @@ entries:
   gopaddle:
   - apiVersion: v2
     appVersion: 4.2.5
-    created: "2022-12-07T10:16:22.424128551+05:30"
+    created: "2022-12-07T14:40:21.540547901+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -12,7 +12,7 @@ entries:
       name: gp-rabbitmq
       repository: ""
     description: Simple low-code platform for Kubernetes developers and operators
-    digest: 646cd402e1bcef6c777b21d538648af3f6f904950ef2b184283d86eb80885a96
+    digest: 380e929b8b7e84b47b007246f0835a25a7e8ff5d2e08bdc3a6cb2ab0f14beeed
     home: https://gopaddle.io
     icon: https://gopaddle-marketing.s3.ap-southeast-2.amazonaws.com/gopaddle.png
     keywords:
@@ -23,12 +23,12 @@ entries:
     kubeVersion: '>=1.21-0'
     name: gopaddle
     urls:
-    - gp-installer-4.2.5.tgz
+    - gopaddle-4.2.5.tgz
     version: 4.2.5
   gp-installer:
   - apiVersion: v2
     appVersion: 4.2.5
-    created: "2022-12-07T10:16:22.424128551+05:30"
+    created: "2022-12-07T14:40:21.572988213+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -53,7 +53,7 @@ entries:
   gp-lite:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-12-07T10:16:22.4490373+05:30"
+    created: "2022-12-07T14:40:21.697348105+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -70,7 +70,7 @@ entries:
     version: 4.2.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-12-07T10:16:22.44018407+05:30"
+    created: "2022-12-07T14:40:21.667333249+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -87,7 +87,7 @@ entries:
     version: 4.2.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-12-07T10:16:22.43183604+05:30"
+    created: "2022-12-07T14:40:21.621923295+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -102,4 +102,4 @@ entries:
     urls:
     - gp-lite-4.2.2.tgz
     version: 4.2.2
-generated: "2022-12-07T10:16:22.414230588+05:30"
+generated: "2022-12-07T14:40:21.502589313+05:30"

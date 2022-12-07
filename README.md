@@ -1,4 +1,12 @@
-[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/gp-lite)](https://artifacthub.io/packages/search?repo=gp-lite)
+<img alt="gopaddle" src="https://gopaddle-marketing.s3.ap-southeast-2.amazonaws.com/gopaddle.png?s=200&v=4" width="200" align="left">
+
+# [gopaddle](https://gopaddle.io/)
+
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/gopaddle-lite)](https://artifacthub.io/packages/search?repo=gopaddle-lite)
+[![Slack Channel](https://img.shields.io/badge/Slack-Join-purple)](https://gopaddleio.slack.com/join/shared_invite/zt-1l73p8wfo-vYk1XcbLAZMo9wcV_AChvg#/shared-invite/email/expanded-email-form)
+[![Twitter](https://img.shields.io/twitter/follow/gopaddleio?style=social)](https://twitter.com/gopaddleio)
+[![YouTube Channel](https://img.shields.io/badge/YouTube-Subscribe-red)](https://www.youtube.com/channel/UCtbfM3vjjJJBAka8DCzKKYg)
+<br><br><br><br>
 
 ## Installation 
 
@@ -10,13 +18,13 @@ gopaddle installation requires a minimum of `8GB RAM` and `4 vCPUs`
 Add the helm repo
 
 ```sh
-helm repo add gp-lite https://gopaddle-io.github.io/gopaddle-lite/
+helm repo add gopaddle https://gopaddle-io.github.io/gopaddle-lite/
 helm repo update
 ```
 Install the chart
 
 ```sh
-helm install gp-lite gp-lite/gp-installer --namespace gp-lite-4-2 --create-namespace
+helm install gp-lite gp-lite/gopaddle --namespace gp-lite-4-2 --create-namespace
 ```
 
 ### Validating the installation
@@ -89,10 +97,4 @@ https://github.com/gopaddle-io/microk8s-community-addons-gplite/blob/main/README
 
 ## Help
 
-For help related to gopaddle community (lite) edition, visit the gopaddle Help Center at:
-     https://help.gopaddle.io
-
-### Support
-
-[Slack](https://gopaddleio.slack.com/join/shared_invite/zt-1i4v0li3n-jyTdalvVSACeNLt39xS2PA#/shared-invite/email/expanded-email-form)
-
+For help related to gopaddle community (lite) edition, visit the gopaddle Help Center at:  https://help.gopaddle.io
