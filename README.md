@@ -2,6 +2,11 @@
 
 # [gopaddle](https://gopaddle.io/)
 
+## Simple low-code platform for Kubernetes developers and operators.
+
+Provision multi-cloud clusters, Dockerize applications, Deploy, Monitor and Build DevOps pipelines within a fraction of time and cost.
+<br>
+
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/gopaddle-lite)](https://artifacthub.io/packages/search?repo=gopaddle-lite)
 [![Slack Channel](https://img.shields.io/badge/Slack-Join-purple)](https://gopaddleio.slack.com/join/shared_invite/zt-1l73p8wfo-vYk1XcbLAZMo9wcV_AChvg#/shared-invite/email/expanded-email-form)
 [![Twitter](https://img.shields.io/twitter/follow/gopaddleio?style=social)](https://twitter.com/gopaddleio)
@@ -24,7 +29,7 @@ helm repo update
 Install the chart
 
 ```sh
-helm install gp-lite gp-lite/gopaddle --namespace gp-lite-4-2 --create-namespace
+helm install gp-lite gopaddle/gopaddle --namespace gp-lite-4-2 --create-namespace
 ```
 
 ### Validating the installation
