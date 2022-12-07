@@ -2,8 +2,8 @@ apiVersion: v1
 entries:
   gp-installer:
   - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-10-20T20:28:49.134051375+05:30"
+    appVersion: 4.2.5
+    created: "2022-12-07T09:35:27.795060155+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -11,17 +11,24 @@ entries:
     - condition: global.installer.chart.rabbitmq
       name: gp-rabbitmq
       repository: ""
-    description: A Helm chart for Kubernetes
-    digest: 3a7d1c593e88bc129a8ebee96f001e06baf1f81dc1d65a70c375b8c0cd15228f
+    description: Simple low-code platform for Kubernetes developers and operators
+    digest: cdcbe508f85805ce73dfe13ac62610af8576e3d68f9c0f5da73508d89f79678c
+    home: https://gopaddle.io
+    icon: https://gopaddle-marketing.s3.ap-southeast-2.amazonaws.com/gopaddle.png
+    keywords:
+    - low-code
+    - Internal Developer Platform
+    - PaaS
+    - Community Edition
+    kubeVersion: '>=1.21-0'
     name: gp-installer
-    type: application
     urls:
-    - gp-installer-4.2.5.tgz
-    version: 4.2.5
+    - gp-installer-4.2.5-1.tgz
+    version: 4.2.5-1
   gp-lite:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-10-20T20:28:49.392226132+05:30"
+    created: "2022-12-07T09:35:27.888622483+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -38,7 +45,7 @@ entries:
     version: 4.2.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-10-20T20:28:49.366622769+05:30"
+    created: "2022-12-07T09:35:27.834174641+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -55,7 +62,7 @@ entries:
     version: 4.2.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-10-20T20:28:49.322576053+05:30"
+    created: "2022-12-07T09:35:27.808154046+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -70,4 +77,4 @@ entries:
     urls:
     - gp-lite-4.2.2.tgz
     version: 4.2.2
-generated: "2022-10-20T20:28:49.122190819+05:30"
+generated: "2022-12-07T09:35:27.785919436+05:30"

@@ -1,98 +1,82 @@
-# Helm repository for gopaddle community (lite) edition
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/gp-lite)](https://artifacthub.io/packages/search?repo=gp-lite)
 
-This outlines the steps to add this helm repository to do a helm-based
-installation of gopaddle community (lite) edition.
+## Installation 
 
-The gopaddle community (lite) edition is also referred with the names
-gp-lite and/or gopaddle-lite.
+### Minimum System Requirements
+gopaddle installation requires a minimum of `8GB RAM` and `4 vCPUs`
 
-## Steps to add gp-lite helm repository
-```
-$ sudo helm repo add gp-lite https://gopaddle-io.github.io/gopaddle-lite
-```
+### Step to install
 
-To confirm that the above has succeeded, issue the following command:
-```
-$ sudo helm repo update
-```
+Add the helm repo
 
-You'll see output like the following:
+```sh
+helm repo add gp-lite https://gopaddle-io.github.io/gopaddle-lite/
+helm repo update
 ```
-...Successfully got an update from the "gp-lite" chart repository
-Update Complete. ⎈Happy Helming!⎈
+Install the chart
+
+```sh
+helm install gp-lite gp-lite/gp-installer --namespace gp-lite-4-2 --create-namespace
 ```
 
-## Install gp-lite from its helm repository
+### Validating the installation
+gopaddle installation can be validated by waiting for the gopaddle services to move to `ready` state.
 
-Once you have added gp-lite helm repository, you can do a helm install of the
-software supplied by this repository in the following steps:
-
-#### Note: The below steps assume gp-lite version 4.2.3. If you are installing a different version number, substitute this with the corresponding version number.
-
-1. Create a namespace for gp-lite:
-
-```
-$ sudo kubectl create ns gp-lite
-```
-
-2. Install rabbitmq:
-
-```
-$ sudo helm install gp-rabbitmq-4-2 gp-lite/gp-lite --namespace gp-lite --set global.routingType=NodePortWithOutIngress --set global.installType=public --set global.storageClassName=microk8s-hostpath --set global.gp-rabbitmq.enabled=true --set global.gp-lite-core.enabled=false --version 4.2.3
-```
-
-#### Note: gopaddle installer requires storage configuration (StorageClass) in the Kubernetes environment in order to provision gopaddle services.
-
-The storageClassName can either be specified as above for "microk8s-hostpath", or, if you want to use a different StorageClass, obtain that by the command:
-```
-$ sudo kubectl get sc
-```
-
-A sample output is shown below:
-```
-$ sudo kubectl get sc
-NAME                          PROVISIONER            RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
-microk8s-hostpath (default)   microk8s.io/hostpath   Delete          Immediate           false                  76m
-```
-
-3. Install gp-lite:
-
-```
-$ sudo helm install gp-core-4-2 gp-lite/gp-lite  --namespace gp-lite  --set global.routingType=NodePortWithOutIngress --set global.installType=public --set global.storageClassName=microk8s-hostpath --set global.cluster.provider=other --set-string global.gopaddle.https=false --set-string global.gopaddleWebhook.https=false --set global.staticIP=$STATICIP  --set global.gp-rabbitmq.enabled=false --set global.gp-lite-core.enabled=true --set gateway.gpkubeux.installSource=microk8s --version 4.2.3
-```
-
-## Wait for ready state
-
-Before you can use all the gopaddle services, they need to be in Ready state.
-To check and wait until all the services move to Ready state, use the below
-command:
-
-$ sudo kubectl wait --for=condition=ready pod -l released-by=gopaddle -n gp-lite
-
-The following is a sample output when the gopaddle services are in ready state:
-```
-pod/rabbitmq-0 condition met
-pod/influxdb-0 condition met
-pod/esearch-0 condition met
-pod/redis-8564f6b9fd-zqb2q condition met
+```sh
+root@localhost:~# kubectl wait --for=condition=ready pod -l released-by=gopaddle -n gp-lite-4-2 --timeout=15m
+pod/webhook-7c49ddfb78-ssvcz condition met
 pod/mongodb-0 condition met
-pod/appworker-7b687d86f6-hxp8s condition met
-pod/gpcore-6bc47c5c94-kq9jk condition met
-pod/costmanager-564c95fcdf-x7f2t condition met
-pod/clustermanager-d95cccbc-dhkl9 condition met
-pod/deploymentmanager-7967f54468-qw24m condition met
-pod/nodechecker-7ddfb5b556-pb9xm condition met
-pod/domainmanager-7c6c6f57f7-xfn2j condition met
-pod/marketplace-97bfcb68f-lnmnq condition met
-pod/configmanager-5c6878bc99-8pzw7 condition met
-pod/activitymanager-b7d669fb8-pcnhn condition met
-pod/appscanner-677cd5799-ztrxj condition met
-pod/usermanager-796bf9c8c9-f8tgg condition met
-pod/cloudmanager-6c8dd7c6c5-d8xpg condition met
-pod/alertmanager-77d4478976-24pgc condition met
-pod/webhook-785c846b44-wxwwd condition met
-pod/gateway-b768864ff-s54b2 condition met
+pod/esearch-0 condition met
+pod/deploymentmanager-65897c7b9c-qlgk8 condition met
+pod/appworker-8546598fd-7svzv condition met
+pod/influxdb-0 condition met
+pod/costmanager-6496dfd6c4-npqj8 condition met
+pod/rabbitmq-0 condition met
+pod/gpcore-85c7c6f65b-5vfmh condition met
 ```
+
+One the installation is complete, gopaddle dashboard can be accessed at http://<NodeIP>:30003/
+
+NodeIP can be obtained by executing the command below:
+
+```sh
+root@localhost:~# kubectl get nodes -o wide
+```
+
+
+## Getting started with gopaddle
+
+Once the gopaddle lite dashboard is available, developers can open the gopaddle dashboard in the browser, review the evaluation agreement and subscribe to the lite edition.
+
+<img width="865" alt="gp-evaluation-agreement" src="https://user-images.githubusercontent.com/74309181/205760559-478ebb58-d1fd-4517-ba1f-5710ed9694c6.png">
+
+
+### Containerize and Deploy
+
+Once the subscription is complete, developers can login to the gopaddle console, using their email ID and the initial password.
+
+In the main dashboard, the **Containerize and Deploy** Quickstart wizard helps to onboard a Source Code project from GitHub using the GitHub personal access token, build and push the generated container image to the Docker Registry. Once the build completes, gopaddle generates the necessary YAML files and deploys the docker image to the local microk8s cluster. 
+
+<img width="1392" alt="gp-quickstart-wizards" src="https://user-images.githubusercontent.com/74309181/205762236-3ade6aaa-bfeb-40c5-8996-c68eed4126cf.png">
+
+#### Pre-requisites
+
+[Docker Access Token with Read & Write Permissions](https://www.docker.com/blog/docker-hub-new-personal-access-tokens/)
+
+[GitHub Person Access Token for containerizing Private Repositories](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
+In the final step of the Containerize and Deploy Quickstart wizard, enable the option to **Disable TLS verification**. 
+
+<img width="1409" alt="containerize-deploy-quickstart" src="https://user-images.githubusercontent.com/74309181/205758353-7ce833e6-e493-4680-b7e9-a04f43e541ff.png">
+
+All the artificats generated during the process can be edited and re-deployed at a later stage.
+
+### Application Templates - Marketplace
+
+Under Templates, the Marketplace Applications hosts a variety of pre-built Kubernetes templates. Developers can subscribe to these templates and deploy them on the local microk8s cluster.
+
+<img width="1445" alt="gp-app-templates-1" src="https://user-images.githubusercontent.com/74309181/205758999-2a50eac6-d292-4280-85dd-3d617eda623a.png">
+
 
 ## microk8s addon for gopaddle community (lite) edition
 
@@ -107,3 +91,8 @@ https://github.com/gopaddle-io/microk8s-community-addons-gplite/blob/main/README
 
 For help related to gopaddle community (lite) edition, visit the gopaddle Help Center at:
      https://help.gopaddle.io
+
+### Support
+
+[Slack](https://gopaddleio.slack.com/join/shared_invite/zt-1i4v0li3n-jyTdalvVSACeNLt39xS2PA#/shared-invite/email/expanded-email-form)
+
