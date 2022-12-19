@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   gopaddle:
   - apiVersion: v2
-    appVersion: 4.2.5
+    appVersion: 4.2.5.1
     created: "2022-12-07T16:11:55.7734977+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
@@ -24,7 +24,7 @@ entries:
     name: gopaddle
     urls:
     - gopaddle-4.2.5.tgz
-    version: 4.2.5
+    version: 4.2.5.1
   gp-installer:
   - apiVersion: v2
     appVersion: 4.2.5
