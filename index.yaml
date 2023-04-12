@@ -3,7 +3,7 @@ entries:
   gopaddle:
   - apiVersion: v2
     appVersion: 4.2.6
-    created: "2023-04-04T23:12:56.895008+05:30"
+    created: "2023-04-12T21:46:09.376885+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -12,7 +12,7 @@ entries:
       name: gp-rabbitmq
       repository: ""
     description: Simple low-code platform for Kubernetes developers and operators
-    digest: 1a5d288ab9278af15b8f32f1319ca3a83c647a5385e87498d92db2eac23aa452
+    digest: cd9c9c2eb94020cd3293b9327f3a87537a6aa33519118a28166b1b880090f83b
     home: https://gopaddle.io
     icon: https://gopaddle-marketing.s3.ap-southeast-2.amazonaws.com/gopaddle.png
     keywords:
@@ -27,7 +27,7 @@ entries:
     version: 4.2.6
   - apiVersion: v2
     appVersion: 4.2.5
-    created: "2023-04-04T23:12:56.890345+05:30"
+    created: "2023-04-12T21:46:09.370595+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -52,7 +52,7 @@ entries:
   gp-installer:
   - apiVersion: v2
     appVersion: 4.2.6
-    created: "2023-04-04T23:12:56.90453+05:30"
+    created: "2023-04-12T21:46:09.386515+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -61,7 +61,7 @@ entries:
       name: gp-rabbitmq
       repository: ""
     description: Simple low-code platform for Kubernetes developers and operators
-    digest: a94b43a3e1cad4826f31358090e3084ca400ab6411ff131654064f642fa58ecc
+    digest: 9b9f31a41f5637082e571198f4ab76948a5e65da88ca2a4a1aed4c40d6cc4b3c
     home: https://gopaddle.io
     icon: https://gopaddle-marketing.s3.ap-southeast-2.amazonaws.com/gopaddle.png
     keywords:
@@ -76,7 +76,7 @@ entries:
     version: 4.2.6
   - apiVersion: v2
     appVersion: 4.2.5
-    created: "2023-04-04T23:12:56.899402+05:30"
+    created: "2023-04-12T21:46:09.381444+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -101,7 +101,7 @@ entries:
   gp-lite:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-04-04T23:12:56.916182+05:30"
+    created: "2023-04-12T21:46:09.398511+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -118,7 +118,7 @@ entries:
     version: 4.2.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-04-04T23:12:56.912558+05:30"
+    created: "2023-04-12T21:46:09.394763+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -135,7 +135,7 @@ entries:
     version: 4.2.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-04-04T23:12:56.908409+05:30"
+    created: "2023-04-12T21:46:09.390411+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -150,4 +150,4 @@ entries:
     urls:
     - gp-lite-4.2.2.tgz
     version: 4.2.2
-generated: "2023-04-04T23:12:56.883003+05:30"
+generated: "2023-04-12T21:46:09.365613+05:30"
