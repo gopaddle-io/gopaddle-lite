@@ -12,8 +12,42 @@ entries:
         - kind: changed
           description: EKS cluster create - UX improvements for Master role ARN, Node role ARN & ALB role
     apiVersion: v2
+    appVersion: 4.2.9
+    created: "2023-07-17T12:18:14.052328+05:30"
+    dependencies:
+    - condition: global.installer.chart.gp-core
+      name: gp-core
+      repository: ""
+    - condition: global.installer.chart.rabbitmq
+      name: gp-rabbitmq
+      repository: ""
+    description: Simple low-code platform for Kubernetes developers and operators
+    digest: aa549470f07e37400a4e84a34979aacf3477825e7be760722eac6c1d9e9f0f8a
+    home: https://gopaddle.io
+    icon: https://gopaddle-marketing.s3.ap-southeast-2.amazonaws.com/gopaddle.png
+    keywords:
+    - low-code
+    - Internal Developer Platform
+    - PaaS
+    - Community Edition
+    kubeVersion: '>=1.21-0'
+    name: gopaddle
+    urls:
+    - gopaddle-4.2.9.tgz
+    version: 4.2.9
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: added
+          description: Docker Compose based installer for Docker Desktop extension
+        - kind: changed
+          description: Docker Image size optimization for faster installation
+        - kind: added
+          description: Gitlab person access token support added
+        - kind: changed
+          description: EKS cluster create - UX improvements for Master role ARN, Node role ARN & ALB role
+    apiVersion: v2
     appVersion: 4.2.8
-    created: "2023-06-28T20:16:13.642934+05:30"
+    created: "2023-07-17T12:18:14.047248+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -47,7 +81,7 @@ entries:
           description: EKS cluster create - UX improvements for Master role ARN, Node role ARN & ALB role
     apiVersion: v2
     appVersion: 4.2.7
-    created: "2023-06-28T20:16:13.638166+05:30"
+    created: "2023-07-17T12:18:14.042599+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -71,7 +105,7 @@ entries:
     version: 4.2.7
   - apiVersion: v2
     appVersion: 4.2.6
-    created: "2023-06-28T20:16:13.631846+05:30"
+    created: "2023-07-17T12:18:14.037768+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -95,7 +129,7 @@ entries:
     version: 4.2.6
   - apiVersion: v2
     appVersion: 4.2.5
-    created: "2023-06-28T20:16:13.625831+05:30"
+    created: "2023-07-17T12:18:14.032556+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -129,8 +163,42 @@ entries:
         - kind: changed
           description: EKS cluster create - UX improvements for Master role ARN, Node role ARN & ALB role
     apiVersion: v2
+    appVersion: 4.2.9
+    created: "2023-07-17T12:18:14.076707+05:30"
+    dependencies:
+    - condition: global.installer.chart.gp-core
+      name: gp-core
+      repository: ""
+    - condition: global.installer.chart.rabbitmq
+      name: gp-rabbitmq
+      repository: ""
+    description: Simple low-code platform for Kubernetes developers and operators
+    digest: 30536ee7ba0f4f26d2c2f2e005a20c4992a394a53fea3980c86feaf60c4c91c6
+    home: https://gopaddle.io
+    icon: https://gopaddle-marketing.s3.ap-southeast-2.amazonaws.com/gopaddle.png
+    keywords:
+    - low-code
+    - Internal Developer Platform
+    - PaaS
+    - Community Edition
+    kubeVersion: '>=1.21-0'
+    name: gp-installer
+    urls:
+    - gp-installer-4.2.9.tgz
+    version: 4.2.9
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: added
+          description: Docker Compose based installer for Docker Desktop extension
+        - kind: changed
+          description: Docker Image size optimization for faster installation
+        - kind: added
+          description: Gitlab person access token support added
+        - kind: changed
+          description: EKS cluster create - UX improvements for Master role ARN, Node role ARN & ALB role
+    apiVersion: v2
     appVersion: 4.2.8
-    created: "2023-06-28T20:16:13.663469+05:30"
+    created: "2023-07-17T12:18:14.071777+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -164,7 +232,7 @@ entries:
           description: EKS cluster create - UX improvements for Master role ARN, Node role ARN & ALB role
     apiVersion: v2
     appVersion: 4.2.7
-    created: "2023-06-28T20:16:13.658221+05:30"
+    created: "2023-07-17T12:18:14.065936+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -188,7 +256,7 @@ entries:
     version: 4.2.7
   - apiVersion: v2
     appVersion: 4.2.6
-    created: "2023-06-28T20:16:13.653576+05:30"
+    created: "2023-07-17T12:18:14.061542+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -212,7 +280,7 @@ entries:
     version: 4.2.6
   - apiVersion: v2
     appVersion: 4.2.5
-    created: "2023-06-28T20:16:13.64846+05:30"
+    created: "2023-07-17T12:18:14.056628+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -237,7 +305,7 @@ entries:
   gp-lite:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-28T20:16:13.67678+05:30"
+    created: "2023-07-17T12:18:14.088811+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -254,7 +322,7 @@ entries:
     version: 4.2.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-28T20:16:13.671914+05:30"
+    created: "2023-07-17T12:18:14.084666+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -271,7 +339,7 @@ entries:
     version: 4.2.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-28T20:16:13.668205+05:30"
+    created: "2023-07-17T12:18:14.08109+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -286,4 +354,4 @@ entries:
     urls:
     - gp-lite-4.2.2.tgz
     version: 4.2.2
-generated: "2023-06-28T20:16:13.617579+05:30"
+generated: "2023-07-17T12:18:14.025837+05:30"
