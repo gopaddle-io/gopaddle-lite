@@ -13,7 +13,7 @@ entries:
           description: EKS cluster create - UX improvements for Master role ARN, Node role ARN & ALB role
     apiVersion: v2
     appVersion: 4.2.9
-    created: "2023-07-17T12:18:14.052328+05:30"
+    created: "2023-08-05T21:45:38.806713+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -22,7 +22,7 @@ entries:
       name: gp-rabbitmq
       repository: ""
     description: Simple low-code platform for Kubernetes developers and operators
-    digest: aa549470f07e37400a4e84a34979aacf3477825e7be760722eac6c1d9e9f0f8a
+    digest: 8ef1a2d0c7cc6e9cd085ecfb2cb6bbcd10ad423ffb80c00ee74931ba31815438
     home: https://gopaddle.io
     icon: https://gopaddle-marketing.s3.ap-southeast-2.amazonaws.com/gopaddle.png
     keywords:
@@ -47,7 +47,7 @@ entries:
           description: EKS cluster create - UX improvements for Master role ARN, Node role ARN & ALB role
     apiVersion: v2
     appVersion: 4.2.8
-    created: "2023-07-17T12:18:14.047248+05:30"
+    created: "2023-08-05T21:45:38.801606+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -81,7 +81,7 @@ entries:
           description: EKS cluster create - UX improvements for Master role ARN, Node role ARN & ALB role
     apiVersion: v2
     appVersion: 4.2.7
-    created: "2023-07-17T12:18:14.042599+05:30"
+    created: "2023-08-05T21:45:38.795464+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -105,7 +105,7 @@ entries:
     version: 4.2.7
   - apiVersion: v2
     appVersion: 4.2.6
-    created: "2023-07-17T12:18:14.037768+05:30"
+    created: "2023-08-05T21:45:38.78881+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -129,7 +129,7 @@ entries:
     version: 4.2.6
   - apiVersion: v2
     appVersion: 4.2.5
-    created: "2023-07-17T12:18:14.032556+05:30"
+    created: "2023-08-05T21:45:38.782107+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -164,7 +164,7 @@ entries:
           description: EKS cluster create - UX improvements for Master role ARN, Node role ARN & ALB role
     apiVersion: v2
     appVersion: 4.2.9
-    created: "2023-07-17T12:18:14.076707+05:30"
+    created: "2023-08-05T21:45:38.831975+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -173,7 +173,7 @@ entries:
       name: gp-rabbitmq
       repository: ""
     description: Simple low-code platform for Kubernetes developers and operators
-    digest: 30536ee7ba0f4f26d2c2f2e005a20c4992a394a53fea3980c86feaf60c4c91c6
+    digest: b6a36abefa020d0108dc686b4be9fac9020796d57a9b95835c77f838d4aa2df7
     home: https://gopaddle.io
     icon: https://gopaddle-marketing.s3.ap-southeast-2.amazonaws.com/gopaddle.png
     keywords:
@@ -198,7 +198,7 @@ entries:
           description: EKS cluster create - UX improvements for Master role ARN, Node role ARN & ALB role
     apiVersion: v2
     appVersion: 4.2.8
-    created: "2023-07-17T12:18:14.071777+05:30"
+    created: "2023-08-05T21:45:38.827521+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -232,7 +232,7 @@ entries:
           description: EKS cluster create - UX improvements for Master role ARN, Node role ARN & ALB role
     apiVersion: v2
     appVersion: 4.2.7
-    created: "2023-07-17T12:18:14.065936+05:30"
+    created: "2023-08-05T21:45:38.82243+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -256,7 +256,7 @@ entries:
     version: 4.2.7
   - apiVersion: v2
     appVersion: 4.2.6
-    created: "2023-07-17T12:18:14.061542+05:30"
+    created: "2023-08-05T21:45:38.81779+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -280,7 +280,7 @@ entries:
     version: 4.2.6
   - apiVersion: v2
     appVersion: 4.2.5
-    created: "2023-07-17T12:18:14.056628+05:30"
+    created: "2023-08-05T21:45:38.812202+05:30"
     dependencies:
     - condition: global.installer.chart.gp-core
       name: gp-core
@@ -305,7 +305,7 @@ entries:
   gp-lite:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T12:18:14.088811+05:30"
+    created: "2023-08-05T21:45:38.8445+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -322,7 +322,7 @@ entries:
     version: 4.2.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T12:18:14.084666+05:30"
+    created: "2023-08-05T21:45:38.840223+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -339,7 +339,7 @@ entries:
     version: 4.2.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-17T12:18:14.08109+05:30"
+    created: "2023-08-05T21:45:38.835873+05:30"
     dependencies:
     - condition: global.gp-lite-core.enabled
       name: gp-lite-core
@@ -354,4 +354,4 @@ entries:
     urls:
     - gp-lite-4.2.2.tgz
     version: 4.2.2
-generated: "2023-07-17T12:18:14.025837+05:30"
+generated: "2023-08-05T21:45:38.773887+05:30"
